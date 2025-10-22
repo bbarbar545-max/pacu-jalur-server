@@ -8,7 +8,7 @@ app.use(cors());
 const wss = new WebSocketServer({ port: 8080 });
 
 // Ganti username TikTok kamu di sini (tanpa @)
-const tiktokUsername = "st.hlzaaaa.wid";
+const tiktokUsername = "afjar35";
 
 const tiktok = new WebcastPushConnection(tiktokUsername);
 
