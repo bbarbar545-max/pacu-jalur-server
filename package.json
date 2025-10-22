@@ -1,0 +1,14 @@
+{
+  "name": "pacu-jalur-server",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.18.2",
+    "tiktok-live-connector": "^2.1.0",
+    "ws": "^8.17.0",
+    "cors": "^2.8.5"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
