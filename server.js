@@ -8,7 +8,14 @@ process.env.TIKTOK_SIGN_SERVER = "https://tiktok.euler.mirror.cafe/api/sign";
 
 const app = express();
 app.use(cors());
-const wss = new WebSocketServer({ port: 8080 });
+
+// Gunakan port otomatis dari Railway (biasanya 3000)
+const server = app.listen(process.env.PORT || 3000, () =>
+  console.log(`🚀 Server HTTP di port ${process.env.PORT || 3000}`)
+);
+
+// Gunakan port yang sama untuk WebSocket
+const wss = new WebSocketServer({ server });
 
 // Ganti username TikTok kamu di sini (tanpa @)
 const tiktokUsername = "kingtanjar";
@@ -30,4 +37,3 @@ tiktok.on("gift", (data) => {
 });
 
 app.get("/", (req, res) => res.send("✅ Server TikTok Live aktif!"));
-app.listen(3000, () => console.log("Server HTTP di port 3000"));
