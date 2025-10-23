@@ -17,7 +17,7 @@ const server = app.listen(process.env.PORT || 3000, () =>
 const wss = new WebSocketServer({ server });
 
 // Ganti username TikTok kamu di sini (tanpa @)
-const tiktokUsername = "afjar35";
+const tiktokUsername = "kingtanjar";
 
 const tiktok = new WebcastPushConnection(tiktokUsername);
 
