@@ -3,7 +3,6 @@ import { WebcastPushConnection } from "tiktok-live-connector";
 import { WebSocketServer } from "ws";
 import cors from "cors";
 
-// 🔧 Gunakan mirror sign server biar gak error 504/500
 process.env.TIKTOK_SIGN_SERVER = "https://tiktok.euler.mirror.cafe/api/sign";
 
 const app = express();
@@ -18,7 +17,7 @@ const server = app.listen(process.env.PORT || 3000, () =>
 const wss = new WebSocketServer({ server });
 
 // Ganti username TikTok kamu di sini (tanpa @)
-const tiktokUsername = "kingtanjar";
+const tiktokUsername = "afjar35";
 
 const tiktok = new WebcastPushConnection(tiktokUsername);
 
