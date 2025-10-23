@@ -3,6 +3,9 @@ import { WebcastPushConnection } from "tiktok-live-connector";
 import { WebSocketServer } from "ws";
 import cors from "cors";
 
+// 🔧 Gunakan mirror sign server biar gak error 504/500
+process.env.TIKTOK_SIGN_SERVER = "https://tiktok.euler.mirror.cafe/api/sign";
+
 const app = express();
 app.use(cors());
 const wss = new WebSocketServer({ port: 8080 });
